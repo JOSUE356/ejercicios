@@ -1,0 +1,38 @@
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Método principal del programa
+        CalcularPrecioEntrada();
+    }
+
+    static void CalcularPrecioEntrada()
+    {
+        // Pedimos al usuario que introduzca su edad
+        Console.Write("Introduce tu edad: ");
+        int edad = Convert.ToInt32(Console.ReadLine());
+
+        // Variable para almacenar el precio de la entrada
+        int precio;
+
+        // Decisión del precio en función de la edad
+        if (edad < 4)
+        {
+            // Si la edad es menor que 4, el precio es 0
+            precio = 0;
+        }
+        else if (edad <= 18)
+        {
+            // Si la edad es menor o igual que 18, el precio es 4
+            precio = 4;
+        }
+        else
+        {
+            // Si la edad es mayor que 18, el precio es 10
+            precio = 10;
+        }
+
+        // Mostramos el precio de la entrada
+        Console.WriteLine($"El precio de la entrada es {precio} €.");
+    }
+}

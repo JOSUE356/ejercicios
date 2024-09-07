@@ -1,0 +1,11 @@
+
+using System;
+// Declarar variables
+int num1 = 45;
+int num2 = 5;
+
+// Realizar la división 
+int resultado = num1 / num2  ;
+
+// Imprimir el resultado
+Console.WriteLine("El resultado es : " + resultado de la divicion);

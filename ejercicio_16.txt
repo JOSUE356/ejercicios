@@ -1,0 +1,17 @@
+      // Mostrar un mensaje simple
+        Console.WriteLine("Hola, mundo!");
+ 
+        // Mostrar un mensaje con una variable
+        string nombre = "Juan";
+        Console.WriteLine("Hola, " + nombre);
+ 
+        // Mostrar un mensaje formateado
+        int edad = 25;
+        Console.WriteLine($"Hola, {nombre}. Tienes {edad} años.");
+ 
+        // Mostrar un mensaje de error
+        Console.Error.WriteLine("Este es un mensaje de error.");
+ 
+        // Pausar la ejecución para ver el mensaje
+
+ 

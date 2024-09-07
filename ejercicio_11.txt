@@ -1,0 +1,38 @@
+
+class Program
+{
+    static void Main()
+    {
+        // Creamos un diccionario que almacena las frutas y sus precios
+        var frutas = new Dictionary<string, double>
+        {
+            {"plátano", 2.50},
+            {"manzana", 5},
+            {"pera", 3},
+            {"naranja", 3.5}
+        };
+
+        // Pedimos al usuario que ingrese la fruta que desea
+        Console.Write("¿Qué fruta quieres? ");
+        string fruta = Console.ReadLine().Trim().ToUpperInvariant();
+
+        // La función Trim() Quita los espacios iniciales, finales y repetidos del texto.
+        // La función ToUpperInvariant()  que se aplica a todos los textos en los que tiene importancia escribir un carácter en mayúsculas o minúsculas.
+
+        // Pedimos al usuario que ingrese la cantidad de kilos que desea
+        Console.Write("¿Cuántos kilos? ");
+        double kg = Convert.ToDouble(Console.ReadLine());
+
+        // buscar la fruta en el diccionario y obtener su precio
+        if (frutas.TryGetValue(fruta, out double precio))
+        {
+            // Si la fruta existe en el diccionario, calculamos el precio total y lo mostramos
+            Console.WriteLine($"{kg} kilos de {fruta} valen {precio * kg} Q");
+        }
+        else
+        {
+            // Si la fruta no existe en el diccionario, mostramos un mensaje de error
+            Console.WriteLine($"Lo siento, la fruta {fruta} no está disponible.");
+        }
+    }
+}

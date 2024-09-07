@@ -1,0 +1,37 @@
+
+class Program
+{
+    static void Main()
+    {
+        // Creamos un diccionario que almacena los datos de la persona
+        var persona = new Dictionary<string, string>();
+
+        // Inicializamos una variable booleana para controlar el bucle while
+        bool continuar = true;
+
+        // Iniciamos el bucle while que se ejecutará mientras el usuario desee agregar más información
+        while (continuar)
+        {
+            // Pedimos al usuario que ingrese el nombre del dato que desea agregar
+            Console.Write("¿Qué dato quieres poner >:) ? ");
+            string clave = Console.ReadLine().Trim();
+
+            // Pedimos al usuario que ingrese el valor correspondiente al dato
+            Console.Write(clave + ": ");
+            string valor = Console.ReadLine().Trim();
+
+            // Agregamos el nuevo elemento al diccionario de la persona
+            persona.Add(clave, valor);
+
+            // Mostramos el estado actual del diccionario de la persona
+            Console.WriteLine("Persona: " + string.Join(", ", persona));
+
+            // Pedimos al usuario que confirme si desea agregar más información
+            Console.Write("¿Quieres añadir más información muajjjajaajjaj (si/no)? ");
+            string respuesta = Console.ReadLine().Trim().ToUpperInvariant();
+
+            // Actualizamos la variable booleana según la respuesta del usuario
+            continuar = respuesta == "SI";
+        }
+    }
+}

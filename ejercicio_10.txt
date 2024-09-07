@@ -1,0 +1,22 @@
+using System;// bueno se que no se utiliza pero mejor lo uso xd
+
+class Program// abre una pestaña de cmd ya  sabemos cual es xd
+{
+    static void Main()// aplicamos ala colsola a.
+    {
+        Console.Write("¿Cómo te llamas? ");//preguntando su nombre 
+        string nombre = Console.ReadLine();
+
+        Console.Write("disculpa pero Cuántos animes has visto: ");//pregunta cuanto a vito y pone un nuemro
+        string anime = Console.ReadLine();
+
+        Console.Write("¿Cuál es tu dirección para ver ONE PIECE? asi para tomarnos el tiempo de verlo: ");//pregunta su direccion
+        string direccion = Console.ReadLine();
+
+        Console.Write("¿Cuál es tu número de teléfono para hablar de ONE PIECE?: ");//pone su numero de telefono
+        string telefono = Console.ReadLine();
+
+        var persona = new { nombre, anime, direccion, telefono };//lso datos de la persona ya lo a dado 
+
+        Console.WriteLine($"{persona.nombre} ha visto {persona.anime} animes, vive en {persona.direccion} y su número de teléfono es {persona.telefono}");// el resultado de la informacions
+    }

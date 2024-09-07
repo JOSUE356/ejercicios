@@ -1,0 +1,25 @@
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Método principal del programa
+        VerificarParidad();
+    }
+
+    static void VerificarParidad()
+    {
+        // Pedimos al usuario que introduzca un número entero
+        Console.Write("Introduce un número entero: ");
+        int numero = Convert.ToInt32(Console.ReadLine());
+
+        // Verificamos si el número es par o impar
+        if (numero % 2 == 0)
+        {
+            Console.WriteLine($"El número {numero} es par");
+        }
+        else
+        {
+            Console.WriteLine($"El número {numero} es impar");
+        }
+    }
+}

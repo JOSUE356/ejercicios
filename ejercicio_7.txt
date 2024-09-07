@@ -1,0 +1,40 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Bienvenido al menú");
+        Console.WriteLine("1. Seleccione que es");
+        Console.WriteLine("2. Hola");
+
+        Console.Write("Ingrese su opción: ");
+        int opcion = Convert.ToInt32(Console.ReadLine());
+
+        switch (opcion)
+        {
+            case 1:
+                SeleccioneQueEs();
+                break;
+            case 2:
+                UnHola();
+                break;
+            default:
+                Console.WriteLine("Opción inválida. Intente de nuevo.");
+                Main();
+                break;
+        }
+    }
+
+    static void SeleccioneQueEs()
+    {
+        Console.WriteLine("Un perrito arcoiris");
+        Main();
+    }
+
+    static void UnHola()
+    {
+        Console.WriteLine("Hola, xd");
+        Main();
+    }
+}

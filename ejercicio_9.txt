@@ -1,0 +1,23 @@
+using System;
+
+interface ISaludo
+{
+    void Saludar();
+}
+
+class Saludo : ISaludo
+{
+    public void Saludar()
+    {
+        Console.WriteLine(" hola profe,xd ");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        ISaludo saludo = new Saludo();
+        saludo.Saludar();
+    }
+}

@@ -1,0 +1,28 @@
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Método principal del programa
+        VerificarContraseña();
+    }
+
+    static void VerificarContraseña()
+    {
+        // La clave secreta
+        string clave = "contraseña";
+
+        // Pedimos al usuario que introduzca la contraseña
+        Console.Write("Introduce la contraseña: ");
+        string contraseña = Console.ReadLine();
+
+        // Convertimos la contraseña a minúsculas para compararla con la clave
+        if (clave.Equals(contraseña, StringComparison.OrdinalIgnoreCase))
+        {
+            Console.WriteLine("La contraseña coincide");
+        }
+        else
+        {
+            Console.WriteLine("La contraseña no coincide");
+        }
+    }
+}

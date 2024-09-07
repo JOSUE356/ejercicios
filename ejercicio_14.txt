@@ -1,0 +1,22 @@
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Método principal del programa
+        MostrarNumerosInversos();
+    }
+
+    static void MostrarNumerosInversos()
+    {
+        // Creamos una lista con los números del 1 al 21
+        List<int> numeros = Enumerable.Range(1, 21).ToList();
+
+        // Mostramos los números en orden inverso
+        Console.WriteLine("mostramos los numeros inversoos ;D :");
+        foreach (int numero in numeros.OrderByDescending(n => n))
+        {
+            Console.WriteLine(numero);
+        }
+    }
+}

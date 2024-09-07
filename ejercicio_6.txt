@@ -1,0 +1,17 @@
+
+class Program
+{
+    static void Main()
+    {
+        // Declarar variables
+        int num1 = 50;
+     
+
+        // Calcular la raíz cuadrada de num1
+        double resultadoRaizCuadrada = Math.Sqrt(num1);
+
+        // Imprimir los resultados
+        
+        Console.WriteLine("La raíz cuadrada de " + num1 + " es: " + resultadoRaizCuadrada);
+    }
+}

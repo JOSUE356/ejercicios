@@ -1,0 +1,12 @@
+
+
+using System;
+// Declarar variables
+int num1 = -5;
+int num2 = -10;
+
+// Realizar la resta
+int resultado = num1 - num2;
+
+// Imprimir el resultado
+Console.WriteLine("El resultado es : " + resultado de la resta);

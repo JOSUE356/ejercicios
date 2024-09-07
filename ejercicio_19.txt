@@ -1,0 +1,51 @@
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Método principal del programa
+        AsignarGrupo();
+    }
+
+    static void AsignarGrupo()
+    {
+        // Pedimos al usuario que introduzca su nombre
+        Console.Write("¿Cómo te llamas? ");
+        string nombre = Console.ReadLine();
+
+        // Pedimos al usuario que introduzca su sexo (M o H)
+        Console.Write("¿Cuál es tu sexo (M o H)? ");
+        string sexo = Console.ReadLine();
+
+        // Variable para almacenar el grupo asignado
+        string grupo;
+
+        // Verificamos el sexo del usuario
+        if (sexo.ToUpper() == "M")
+        {
+            // Verificamos si el nombre del usuario es menor que "m" en orden alfabético
+            if (string.Compare(nombre.ToLower(), "m", StringComparison.Ordinal) < 0)
+            {
+                grupo = "A";
+            }
+            else
+            {
+                grupo = "B";
+            }
+        }
+        else
+        {
+            // Verificamos si el nombre del usuario es mayor que "n" en orden alfabético
+            if (string.Compare(nombre.ToLower(), "n", StringComparison.Ordinal) > 0)
+            {
+                grupo = "A";
+            }
+            else
+            {
+                grupo = "B";
+            }
+        }
+
+        // Mostramos el grupo asignado
+        Console.WriteLine($"Tu grupo es {grupo}");
+    }
+}

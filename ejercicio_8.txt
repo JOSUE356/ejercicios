@@ -1,0 +1,105 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Bienvenido al menú");
+        Console.WriteLine("1. Sumar dos números");
+        Console.WriteLine("2. Restar dos números");
+        Console.WriteLine("3. Multiplicar dos números");
+        Console.WriteLine("4. Dividir dos números");
+        Console.WriteLine("5. Calcular la raíz cuadrada de un número");
+        Console.WriteLine("6. Salir");
+
+        Console.Write("Ingrese su opción: ");
+        int opcion = Convert.ToInt32(Console.ReadLine());
+
+        switch (opcion)
+        {
+            case 1:
+                SumarDosNumeros();
+                break;
+            case 2:
+                RestarDosNumeros();
+                break;
+            case 3:
+                MultiplicarDosNumeros();
+                break;
+            case 4:
+                DividirDosNumeros();
+                break;
+            case 5:
+                CalcularRaizCuadrada();
+                break;
+            case 6:
+                Console.WriteLine("Adiós!");
+                return;
+            default:
+                Console.WriteLine("Opción inválida. Intente de nuevo.");
+                Main();
+                break;
+        }
+    }
+
+    static void SumarDosNumeros()
+    {
+        Console.Write("Ingrese el primer número: ");
+        int num1 = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Ingrese el segundo número: ");
+        int num2 = Convert.ToInt32(Console.ReadLine());
+        int resultado = num1 + num2;
+        Console.WriteLine("El resultado es: " + resultado);
+        Main();
+    }
+
+    static void RestarDosNumeros()
+    {
+        Console.Write("Ingrese el primer número: ");
+        int num1 = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Ingrese el segundo número: ");
+        int num2 = Convert.ToInt32(Console.ReadLine());
+        int resultado = num1 - num2;
+        Console.WriteLine("El resultado es: " + resultado);
+        Main();
+    }
+
+    static void MultiplicarDosNumeros()
+    {
+        Console.Write("Ingrese el primer número: ");
+        int num1 = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Ingrese el segundo número: ");
+        int num2 = Convert.ToInt32(Console.ReadLine());
+        int resultado = num1 * num2;
+        Console.WriteLine("El resultado es: " + resultado);
+        Main();
+    }
+
+    static void DividirDosNumeros()
+    {
+        Console.Write("Ingrese el primer número: ");
+        int num1 = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Ingrese el segundo número: ");
+        int num2 = Convert.ToInt32(Console.ReadLine());
+        if (num2 == 0)
+        {
+            Console.WriteLine("No se puede dividir entre cero.");
+            Main();
+        }
+        else
+        {
+            double resultado = (double)num1 / num2;
+            Console.WriteLine("El resultado es: " + resultado);
+            Main();
+        }
+    }
+
+    static void CalcularRaizCuadrada()
+    {
+        Console.Write("Ingrese un número: ");
+        int num = Convert.ToInt32(Console.ReadLine());
+        double resultado = Math.Sqrt(num);
+        Console.WriteLine("La raíz cuadrada de " + num + " es: " + resultado);
+        Main();
+    }
+}

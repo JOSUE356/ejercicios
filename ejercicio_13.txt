@@ -1,0 +1,41 @@
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Método principal del programa
+        CalcularPromedio();
+    }
+
+    static void CalcularPromedio()
+    {
+        // Creamos una lista para almacenar las notas de los patojos de 4 bimestres
+        List<float> notas = new List<float>();
+
+        // Pedimos al usuario que ingrese las notas que obtuvieron los patojos en los 4 bimestres
+        for (int i = 0; i < 4; i++)
+        {
+            // Pedimos al usuario que ingrese la nota del bimestre actual
+            Console.Write($"Ingrese la nota del bimestre {i + 1}: ");
+            float nota = float.Parse(Console.ReadLine());
+
+            // Agregamos la nota a la lista de notas
+            notas.Add(nota);
+        }
+
+        // Sumamos las notas de los patojos reprobados, pero siempre ganarán XD
+        float sumaNotas = 0;
+        foreach (float nota in notas)
+        {
+            sumaNotas += nota;
+        }
+
+        // Calculamos el promedio
+        float promedio = sumaNotas / notas.Count;
+
+        // Mostramos los resultados
+        Console.WriteLine("Notas ingresadas: " + string.Join(", ", notas));
+        Console.WriteLine("Suma de las notas: " + sumaNotas);
+        Console.WriteLine("Promedio de las notas: " + promedio);
+    }
+}
